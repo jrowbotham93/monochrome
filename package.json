@@ -1,0 +1,39 @@
+{
+  "name": "monochrome",
+  "version": "1.0.0",
+  "description": "simple web3 react component library",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test",
+    "start": "webpack serve --port 3002",
+    "build": "NODE_ENV=production webpack"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "typescript"
+  ],
+  "author": "James Rowbotham",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.3",
+    "styled-system": "^5.1.5",
+    "typescript": "^4.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "@types/styled-components": "^5.1.16",
+    "@types/styled-system": "^5.1.13",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-styled-components": "^2.0.2",
+    "html-webpack-plugin": "^5.5.0",
+    "ts-loader": "^9.2.6",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0"
+  }
+}
