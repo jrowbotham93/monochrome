@@ -1,6 +1,6 @@
 {
   "name": "monochrome",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "simple web3 react component library",
   "main": "index.js",
   "scripts": {
