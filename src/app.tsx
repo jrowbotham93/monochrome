@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { ThemeProvider } from "styled-components";
+import styled from "styled-components";
 import {
   color,
   layout,
@@ -8,12 +8,13 @@ import {
   FlexboxProps,
 } from "styled-system";
 
-import theme from "./theme";
+import { ThemeWrapper } from "./components/ThemeWrapper";
 
 const Title = styled.h1`
   ${color}
   font-size: 1.5em;
   text-align: center;
+  background-color: ${({ theme }) => theme.colors.blue};
 `;
 
 const Wrapper = styled.section<FlexboxProps & LayoutProps>`
@@ -23,11 +24,11 @@ const Wrapper = styled.section<FlexboxProps & LayoutProps>`
 `;
 
 const App = () => (
-  <ThemeProvider theme={theme}>
+  <ThemeWrapper color={"green"}>
     <Wrapper justifyContent="center" alignContent="center">
       <Title color="blue">Testing styled components/ system</Title>
     </Wrapper>
-  </ThemeProvider>
+  </ThemeWrapper>
 );
 
 export default App;
