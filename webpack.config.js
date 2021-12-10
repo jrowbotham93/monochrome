@@ -1,13 +1,13 @@
-const path = require("path");
-const prod = process.env.NODE_ENV === "production";
+const path = require('path')
+const prod = process.env.NODE_ENV === 'production'
 
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  mode: prod ? "production" : "development",
-  entry: path.join(__dirname, "src", "index.tsx"),
+  mode: prod ? 'production' : 'development',
+  entry: path.join(__dirname, 'src', 'index.tsx'),
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [
@@ -15,16 +15,16 @@ module.exports = {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         resolve: {
-          extensions: [".ts", ".tsx", ".js", ".json"],
+          extensions: ['.ts', '.tsx', '.js', '.json']
         },
-        use: "ts-loader",
-      },
-    ],
+        use: 'ts-loader'
+      }
+    ]
   },
-  devtool: prod ? undefined : "source-map",
+  devtool: prod ? undefined : 'source-map',
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "src", "index.html"),
-    }),
-  ],
-};
+      template: path.join(__dirname, 'src', 'index.html')
+    })
+  ]
+}

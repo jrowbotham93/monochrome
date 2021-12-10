@@ -1,14 +1,15 @@
-import React, { ReactElement, forwardRef } from "react";
-import styled from "styled-components";
-import { LayoutProps, layout } from "styled-system";
-import type { DivProps } from "react-html-props";
+import React, { ReactElement, ComponentPropsWithoutRef } from 'react'
+import styled from 'styled-components'
+import { LayoutProps, layout } from 'styled-system'
 
-const StyledBox = styled.div<LayoutProps>`
+type BoxProps = ComponentPropsWithoutRef<'div'> & LayoutProps
+
+const StyledBox = styled.div<BoxProps>`
   ${layout}
-`;
+`
 
-const Box = (props: DivProps): ReactElement => {
-  return <StyledBox {...props}>{props.children}</StyledBox>;
-};
+const Box = (props: BoxProps): ReactElement => {
+  return <StyledBox {...props}>{props.children}</StyledBox>
+}
 
-export default Box;
+export default Box
